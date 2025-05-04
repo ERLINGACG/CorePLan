@@ -1,0 +1,7 @@
+# 公共配置（所有环境生效）
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev  # 默认激活开发环境
+

@@ -1,0 +1,12 @@
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
+}
+rootProject.name = 'WebCore-G'
+include 'Start'
+include 'Controller-J'
+include 'Service-J'
+include 'Config-J'
+include 'Dao-J'
+include 'Pojo-J'
+include 'Service-Kt'
+include 'Util-J'

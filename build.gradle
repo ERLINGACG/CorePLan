@@ -1,0 +1,69 @@
+buildscript {
+    ext.kotlin_version = '2.1.20'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0' // 不应用到根项目
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+apply plugin: 'kotlin'
+
+
+allprojects {
+    group = 'com.erling'
+    version = '0.0.1-SNAPSHOT'
+
+    repositories {
+        mavenCentral()
+    }
+}
+
+// 为子模块配置公共依赖
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot' // 子模块单独应用Spring Boot插件
+
+    dependencyManagement {
+        imports {
+            mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+        }
+    }
+
+    // 公共测试依赖
+    dependencies {
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-actuator'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'com.mysql:mysql-connector-j'       // MySQL数据库驱动
+        implementation 'org.projectlombok:lombok'          // 简化对象创建过程
+        annotationProcessor 'org.projectlombok:lombok'     // 缺失的关键配置
+        implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4' // MyBatis框架
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+bootJar {
+    mainClass = 'com.erling.Application' // 替换为你的主类全限定名
+}
+
+kotlin {
+    jvmToolchain(21)
+}
