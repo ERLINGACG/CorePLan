@@ -1,5 +1,7 @@
 package com.erling.utilJ.cryptography;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
@@ -8,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.util.Base64;
 
+@Schema(description = "AES",title = "AES加密解密")
 public class CryptographyAES {
 
     /**

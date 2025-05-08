@@ -1,11 +1,15 @@
 package com.erling.controllerJ.user;
-import com.erling.daoJ.user.PassWord;
+import com.erling.pojo.user.PassWord;
 import com.erling.serviceJ.user.UserServiceJ;
 import com.erling.serviceJ.user.login.Login;
+import com.erling.serviceJ.user.login.LoginT;
 import com.erling.serviceJ.user.login.Register;
-import com.erling.utilJ.cryptography.CryptographySHA;
-import com.erling.daoJ.user.User;
+import com.erling.pojo.user.User;
+import com.erling.utilJ.result.Result;
+import com.erling.utilJ.result.ResultCode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,6 +19,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/userTest")
 public class TestUserController {
+
     @Autowired
     private Register register;
     @Autowired
@@ -22,6 +27,9 @@ public class TestUserController {
 
     @Autowired
     private UserServiceJ userServiceJ;
+
+    @Autowired
+    private LoginT loginT;
 
     @RequestMapping(value = "/test1")
     public ResponseEntity<Object> test() {
@@ -45,21 +53,33 @@ public class TestUserController {
 //        }
 //        return  user;
 //   }
-    @RequestMapping(value = "/test3")
-    public Map<User, PassWord> test3(@RequestParam String username, @RequestParam String password) {
-        boolean result = register.register(username, password);
-        Map<User, PassWord> map = new HashMap<>();
+
+
+
+    @RequestMapping(value = "/test5")
+    public  ResponseEntity<Result<?>> test5(@RequestParam String username) {
         User user = userServiceJ.getUserByUsername(username);
-        PassWord passWord = userServiceJ.getPassWordByUsername(user.getId());
-        map.put(user, passWord);
-        System.out.println("result: " + result);
-        return map;
+
+        if (user == null) {
+
+            return ResponseEntity
+                    .status(ResultCode.NOT_FOUND.getCode())  // 404状态码
+                    .body(new Result<>(ResultCode.NOT_FOUND));
+        }else{
+            return ResponseEntity
+                    .status(ResultCode.SUCCESS.getCode())  // 200状态码
+                    .body(new Result<>(ResultCode.SUCCESS,user));
+        }
+
     }
-    @RequestMapping(value = "/test4")
-    public Boolean test4(@RequestParam String username, @RequestParam String password) {
-        boolean result = login.login(username, password);
-        System.out.println("result: " + result);
-        return result;
-    }
+//    @PostMapping("/user")
+//    public ResponseEntity<Result<?>> loginT(@RequestParam String username, @RequestParam String password) {
+//            return loginT.login(username, password);
+//    }
+//    @GetMapping("/user")
+//    public User getUser() {  // 直接返回User对象
+//        return new User();
+//    }
+
 
 }
