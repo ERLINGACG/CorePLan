@@ -1,0 +1,153 @@
+
+
+
+.register-box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.register-box{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+}
+/* 元素 */
+.register-nom{
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* 登录图片 */
+.register-left{
+    position: relative;
+    display: flex;
+    height: 200px;
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top:  30px;
+    align-items: center;
+    .register-left-img{
+        position: absolute;
+        height: 100%;
+        width: 70%;
+        border-radius: 5px;
+        left: 15%;
+        right: 15%;
+        /*border:  1px solid #ccc;*/
+    }
+}
+/* 登录框 */
+.register-right{
+
+    height: 200px;
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /*margin-bottom: 200px;*/
+    .register-input-item input{
+
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        border-bottom:  1px solid #ccc;
+        font-size: 20px;
+        color: honeydew;
+    }
+    .register-input-item input[type='username']{
+        margin-top: 20px;
+    }
+    .register-input-item input[type='password']{
+        margin-top: 20px;
+    }
+
+    .register-input-item-code{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .code-input{
+
+            background-color: transparent;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: none;
+            border-bottom:  1px solid #ccc;
+            font-size: 15px;
+            color: honeydew;
+            margin-top: 20px;
+            width:60%;
+            height: 50%;
+        }
+        .code-img{
+            margin-top: 10px;
+
+            width: 130px;
+            border-radius: 5px;
+            height: 40px;
+
+            margin-left: -40%;
+            border: 1px solid #ccc; /* 增加边框增强可视性 */
+            cursor: pointer; /* 添加手型指针 */
+            /*width: 60%;*/
+            /*height: 50%;*/
+
+        }
+    }
+
+    .register-btn{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 65%;
+        .r-submit-btn{
+            background-color: transparent;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: honeydew;
+            margin-right: 10px;
+        }
+        .r-register-btn{
+            background-color: transparent;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: honeydew;
+            margin-right: 10px;
+        }
+
+        .register-btn:hover, .submit-btn:hover{
+            filter: brightness(1.2);
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+
+}
+/* 版权信息 */
+.copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+}

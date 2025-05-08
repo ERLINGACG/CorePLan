@@ -1,0 +1,119 @@
+
+
+
+.login-box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-box{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+}
+/* 元素 */
+.login-nom{
+    height: 200px;
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* 登录图片 */
+.login-left{
+    position: relative;
+    display: flex;
+    height: 200px;
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    .login-left-img{
+        position: absolute;
+        height: 100%;
+        width: 70%;
+        border-radius: 5px;
+        left: 15%;
+        right: 15%;
+        /*border:  1px solid #ccc;*/
+    }
+}
+/* 登录框 */
+.login-right{
+    height: 200px;
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    .login-input-item input{
+
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        border-bottom:  1px solid #ccc;
+        font-size: 20px;
+        color: honeydew;
+    }
+    .login-input-item input[type='username']{
+        margin-top: 20px;
+    }
+    .login-input-item input[type='password']{
+        margin-top: 20px;
+    }
+
+
+    .login-btn{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 65%;
+        .submit-btn{
+            background-color: transparent;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: honeydew;
+            margin-right: 10px;
+        }
+        .register-btn{
+            background-color: transparent;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: honeydew;
+            margin-right: 10px;
+        }
+
+        .login-btn:hover, .submit-btn:hover{
+            filter: brightness(1.2);
+            transform: translateY(-1px);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+
+}
+/* 版权信息 */
+.copyright {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    color: #999;
+    font-size: 12px;
+    text-align: center;
+}
