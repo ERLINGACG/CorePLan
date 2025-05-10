@@ -1,26 +1,38 @@
 <script setup>
 
 
+
 </script>
+
 <script>
 
 import markdownData, {homeContent} from "@/model/home-data/markdownData.js";
 import {marked} from "marked";
+import Home from "@/view/home/home.js"
+
+const home = new Home()
+
 export default {
+    mounted(){
+        home.SetLeftBar(this.$refs.leftBar);
+    },
     data() {
         return {
             markdownData: markdownData,
-            homepageData: homeContent
+            homepageData: homeContent,
 
         }
     },
     methods: {
+
+
+
        renderMarkdown() {
            return marked.parse(this.markdownData);
        },
        renderHomepage() {
            return marked.parse(this.homepageData);
-       }
+       },
 
     }
 }
@@ -45,16 +57,18 @@ export default {
             </div>
           </div>
 
-          <div class="home-content-box-left-bar">
-             <div class="tile-container">
-               <a class="tile-title">模块介绍</a>
-             </div>
-            <div class="tile-container">
-              <a class="tile-title" href="/module">模块一览</a>
-            </div>
-            <div class="tile-container">
-              <a class="tile-title">版本信息</a>
-            </div>
+          <div class="home-content-box-left-bar" ref="leftBar">
+            <div class="item-container">
+               <div class="tile-container">
+                 <a class="tile-title">模块介绍</a>
+               </div>
+              <div class="tile-container">
+                <a class="tile-title" href="/module">模块一览</a>
+              </div>
+              <div class="tile-container">
+                <a class="tile-title">版本信息</a>
+              </div>
+          </div>
 
           </div>
 

@@ -1,3 +1,6 @@
+if (typeof window.global === 'undefined') {
+    window.global = window;
+}
 import './assets/main.css'
 
 import { createApp } from 'vue'

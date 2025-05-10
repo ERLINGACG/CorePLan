@@ -1,0 +1,22 @@
+.imageShow-container{
+    height: 500px;
+    width: 600px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+    /*display: flex;*/
+    overflow-y: auto; /* 隐藏纵向滚动 */
+    /*display: block;    !* 修改为块级元素 *!*/
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;  /* 添加横向滚动 */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* 移动端惯性滚动 */
+    .preview-image{
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+        display: block;
+        pointer-events: none; /* 防止拖动干扰滚动 */
+    }
+}

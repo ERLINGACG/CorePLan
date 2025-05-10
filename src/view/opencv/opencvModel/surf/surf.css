@@ -1,0 +1,35 @@
+.surf-container{
+    display: flex;
+    flex-direction: column;
+
+}
+.content-upload{
+    /*position: absolute;*/
+    display: grid;
+    /*height: 720px;*/
+    /*width: 800px;*/
+    .upload-container{
+        /*position: absolute;*/
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 600px;
+        width: 800px;
+        display: block; /* 修改显示方式 */
+        overflow: auto; /* 修改为auto允许滚动 */
+
+    }
+    .upload-input-btn{
+       margin-top: 10px;
+        margin-bottom: 5px;
+        .upload-btn{
+            margin-right: 3px;
+            background-color: transparent;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            color: honeydew;
+        }
+    }
+}
