@@ -21,6 +21,7 @@ dependencies {
 
     implementation project(':Controller-J') //其他模块的依赖
     implementation project(':Config-J') //其他模块的依赖
+//    implementation project(':Bridge-J') //其他模块的依赖
 
 }
 

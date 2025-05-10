@@ -2,6 +2,7 @@
   <dictionary name="project">
     <words>
       <w>coredatabase</w>
+      <w>libpath</w>
     </words>
   </dictionary>
 </component>

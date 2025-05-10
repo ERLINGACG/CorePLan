@@ -17,7 +17,7 @@ dependencies {
     implementation project(':Util-J')
 
 
-    implementation 'org.testng:testng:6.9.6'
+//    implementation 'org.testng:testng:6.9.6'
     implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
 
     testImplementation project(':Pojo-J')

@@ -1,14 +1,17 @@
 package com.erling.nativeJ.opencvJ;
 
+import com.erling.utilJ.image.ImageData;
 import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.ptr.IntByReference;
+import org.springframework.stereotype.Component;
 
+@Component
 public class WebCoreOpenCV {
-//    private static final String path = WebCoreOpenCV.class.getClassLoader()
-//            .getResource("native/WebCoreOpenCV.dll").getPath().replaceFirst("/", "");
+
      private static final String path = "lib\\WebCoreOpenCV.dll";
+
 
     public interface  MyClib extends Library{
         MyClib INSTANCE= Native.load(path,MyClib.class);
@@ -32,11 +35,15 @@ public class WebCoreOpenCV {
 //        byte[] imageData = WebCoreOpenCV.openImage();
         Pointer pointer = null;
         try {
-            IntByReference outWidth = new IntByReference();
-            IntByReference outHeight = new IntByReference();
-            IntByReference outSize = new IntByReference();
-            pointer = MyClib.INSTANCE.SURFJ(imageData, imageData.length, outWidth, outHeight, outSize);
-            return pointer.getByteArray(0, outSize.getValue());
+//            IntByReference outWidth = new IntByReference();
+//            IntByReference outHeight = new IntByReference();
+//            IntByReference outSize = new IntByReference(）
+            ImageData<?> imageData1 = new ImageData<IntByReference>(new IntByReference(),new IntByReference(), new IntByReference());
+            pointer = MyClib.INSTANCE.SURFJ(imageData, imageData.length,
+                    (IntByReference) imageData1.getOutWidth(),
+                    (IntByReference) imageData1.getOutHeight(),
+                    (IntByReference) imageData1.getOutSiz());
+            return pointer.getByteArray(0, ((IntByReference) imageData1.getOutSiz()).getValue());
         } finally {
             if (pointer != null) {
                 MyClib.INSTANCE.releaseImage(pointer);
