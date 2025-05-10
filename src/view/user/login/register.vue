@@ -45,7 +45,7 @@ export default {
 
       <div class="register-left">
         <div class="register-left-img">
-          <img src="./image/OIP-D.png" height=200px width="300px" alt="">
+          <img src="../image/OIP-D.png" height=200px width="300px" alt="">
         </div>
       </div>
 

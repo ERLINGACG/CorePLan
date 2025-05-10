@@ -3,5 +3,5 @@
   <router-view/>
 </template>
 <script setup lang="ts">
-import Login from "@/./view/user/login.vue"
+import Login from "@/view/user/login/login.vue"
 </script>
