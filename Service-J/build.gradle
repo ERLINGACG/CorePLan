@@ -19,6 +19,7 @@ dependencies {
 
 //    implementation 'org.testng:testng:6.9.6'
     implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    implementation project(':Native-J')
 
     testImplementation project(':Pojo-J')
     testImplementation project(':Dao-J')

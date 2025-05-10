@@ -2,7 +2,10 @@
   <dictionary name="project">
     <words>
       <w>coredatabase</w>
+      <w>imagefor</w>
       <w>libpath</w>
+      <w>matfor</w>
+      <w>textproducer</w>
     </words>
   </dictionary>
 </component>

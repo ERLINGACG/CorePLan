@@ -8,7 +8,7 @@ import com.sun.jna.ptr.IntByReference;
 import org.springframework.stereotype.Component;
 
 @Component
-public class WebCoreOpenCV {
+public class TWebCoreOpenCV {
 
      private static final String path = "lib\\WebCoreOpenCV.dll";
 
@@ -20,7 +20,6 @@ public class WebCoreOpenCV {
 
         void releaseImage(Pointer image);
     }
-
     public static byte[] openImage() {
         IntByReference outWidth = new IntByReference();
         IntByReference outHeight = new IntByReference();
@@ -32,12 +31,8 @@ public class WebCoreOpenCV {
         return pointer.getByteArray(0, outSize.getValue());
     }
     public static byte[] SURFJ(byte[] imageData) {
-//        byte[] imageData = WebCoreOpenCV.openImage();
         Pointer pointer = null;
         try {
-//            IntByReference outWidth = new IntByReference();
-//            IntByReference outHeight = new IntByReference();
-//            IntByReference outSize = new IntByReference(）
             ImageData<?> imageData1 = new ImageData<IntByReference>(new IntByReference(),new IntByReference(), new IntByReference());
             pointer = MyClib.INSTANCE.SURFJ(imageData, imageData.length,
                     (IntByReference) imageData1.getOutWidth(),

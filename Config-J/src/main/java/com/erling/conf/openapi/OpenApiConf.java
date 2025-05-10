@@ -1,4 +1,4 @@
-package com.erling.conf;
+package com.erling.conf.openapi;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;

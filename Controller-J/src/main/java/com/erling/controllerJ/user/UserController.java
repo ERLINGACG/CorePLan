@@ -29,7 +29,7 @@ public class UserController {
      }
 
      @PostMapping("/login")
-     public ResponseEntity<Result<?>>login(@RequestParam String username, @RequestParam String password) {
+     public ResponseEntity<Result<?>> login(@RequestParam String username, @RequestParam String password) {
           return login.login(username, password);
      }
      @PostMapping("/register")

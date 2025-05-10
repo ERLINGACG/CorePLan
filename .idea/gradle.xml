@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AI-J" />
             <option value="$PROJECT_DIR$/Config-J" />
             <option value="$PROJECT_DIR$/Controller-J" />
             <option value="$PROJECT_DIR$/Dao-J" />

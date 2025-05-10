@@ -15,6 +15,7 @@ dependencies {
     implementation project(':Pojo-J')
     implementation project(':Service-Kt')
     implementation project(':Native-J')
+    implementation project(':AI-J')
     implementation 'junit:junit:4.12'
     implementation project(':Util-J')
     testImplementation platform('org.junit:junit-bom:5.10.0')

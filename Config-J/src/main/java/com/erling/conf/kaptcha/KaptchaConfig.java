@@ -1,4 +1,4 @@
-package com.erling.conf;
+package com.erling.conf.kaptcha;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.google.code.kaptcha.util.Config;

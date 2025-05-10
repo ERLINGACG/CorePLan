@@ -11,3 +11,5 @@ include 'Pojo-J'
 include 'Service-Kt'
 include 'Util-J'
 include 'Native-J'
+
+include 'AI-J'
