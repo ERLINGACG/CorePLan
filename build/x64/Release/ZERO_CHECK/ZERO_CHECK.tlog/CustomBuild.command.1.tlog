@@ -1,0 +1,10 @@
+^E:\COREPLAN\WEB\WEBCORE\WEBCOREOPENCV\BUILD\CMAKEFILES\41C94C59CD808B14B415D2C2B14DFED7\GENERATE.STAMP.RULE
+setlocal
+E:\VScode\cmake\bin\cmake.exe -SE:/CorePLAN/Web/WebCore/WebCoreOpenCV -BE:/CorePLAN/Web/WebCore/WebCoreOpenCV/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/CorePLAN/Web/WebCore/WebCoreOpenCV/build/WebCoreOpenCVT.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
