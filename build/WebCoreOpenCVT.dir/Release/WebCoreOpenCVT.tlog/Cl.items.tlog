@@ -1,3 +1,6 @@
-E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\main.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\main.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\ImageMian.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\ImageMian.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\EdgeDetectionMian.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\EdgeDetectionMian.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\utils\ClearUtils.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\ClearUtils.obj
 E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\WebCoreImage.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\WebCoreImage.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\EdgeDetection.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\EdgeDetection.obj
 E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\utils\Clear.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\Clear.obj

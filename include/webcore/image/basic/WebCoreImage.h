@@ -12,9 +12,28 @@
 namespace webcoreimage {
     class CoreImage{
         public:
-
+        /**
+         * @brief 
+         * 打开并解码图片
+         * @param data  图片byte数组
+         * @param size  图片byte数组长度
+         * @return std::unique_ptr<ImageStruct> 图片结构体
+         */
         std::unique_ptr<ImageStruct> openImage(unsigned char* data,int size);
+        
+        /** 
+         * @brief 
+         * 图片转Mat
+         * @param image  图片结构体
+         * @return std::unique_ptr<cv::Mat> 图片Mat
+         */
         std::unique_ptr<cv::Mat>     ImageforMat(ImageStruct* image); 
+        /** 
+         * @brief 
+         * Mat转图片
+         * @param image  图片Mat
+         * @return std::unique_ptr<ImageStruct> 图片结构体
+         */
         std::unique_ptr<ImageStruct> MatforImage(cv::Mat* image);
 
 
@@ -33,7 +52,7 @@ namespace webcoreimage {
             double delta,       // 阈值
             int imageqos
         );
-           std::unique_ptr<ImageStruct> Scharr(cv::Mat* image); 
+        std::unique_ptr<ImageStruct> Scharr(cv::Mat* image); 
            
            // 自动生成的析构函数
            ~CoreImage() = default;

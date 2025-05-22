@@ -1030,6 +1030,122 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "FIND_PACKAGE_MESSAGE_DETAILS_JNI",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Details about finding JNI"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "[E:/MK/JDK17-64/include][E:/MK/JDK17-64/include/win32][found components: AWT JVM ][v()]"
+		},
+		{
+			"name" : "JAVA_AWT_INCLUDE_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Java AWT Native Interface include directory"
+				}
+			],
+			"type" : "PATH",
+			"value" : "E:/MK/JDK17-64/include"
+		},
+		{
+			"name" : "JAVA_AWT_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Java AWT Native Interface library"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "E:/MK/JDK17-64/lib/jawt.lib"
+		},
+		{
+			"name" : "JAVA_INCLUDE_PATH",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "JNI include directory"
+				}
+			],
+			"type" : "PATH",
+			"value" : "E:/MK/JDK17-64/include"
+		},
+		{
+			"name" : "JAVA_INCLUDE_PATH2",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "jni_md.h jniport.h include directory"
+				}
+			],
+			"type" : "PATH",
+			"value" : "E:/MK/JDK17-64/include/win32"
+		},
+		{
+			"name" : "JAVA_JVM_LIBRARY",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "Java Virtual Machine library"
+				}
+			],
+			"type" : "FILEPATH",
+			"value" : "E:/MK/JDK17-64/lib/jvm.lib"
+		},
+		{
+			"name" : "JNI_INCLUDE_PATH2_OPTIONAL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Test JNI_INCLUDE_PATH2_OPTIONAL"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : ""
+		},
+		{
+			"name" : "WebCoreJNI_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;E:/MK/JDK17-64/lib/jawt.lib;general;E:/MK/JDK17-64/lib/jvm.lib;general;opencv_world4120;"
+		},
+		{
 			"name" : "WebCoreOpenCVT_BINARY_DIR",
 			"properties" : 
 			[

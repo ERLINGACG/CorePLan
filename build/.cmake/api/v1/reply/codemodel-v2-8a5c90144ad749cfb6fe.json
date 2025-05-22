@@ -17,7 +17,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -34,7 +35,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -43,14 +45,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Debug-aac244c26e5a62ddb794.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-8a4e11fc1c22ceda4353.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "WebCoreJNI::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WebCoreJNI-Debug-fe6895a6a32cb290a598.json",
+					"name" : "WebCoreJNI",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "WebCoreOpenCVT::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-WebCoreOpenCVT-Debug-2476f86473ab9f8f513f.json",
+					"jsonFile" : "target-WebCoreOpenCVT-Debug-679f2154adf9da7f98cf.json",
 					"name" : "WebCoreOpenCVT",
 					"projectIndex" : 0
 				},
@@ -79,7 +88,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -96,7 +106,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -105,14 +116,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Release-aac244c26e5a62ddb794.json",
+					"jsonFile" : "target-ALL_BUILD-Release-8a4e11fc1c22ceda4353.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "WebCoreJNI::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WebCoreJNI-Release-e907d157826ca8b32b1c.json",
+					"name" : "WebCoreJNI",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "WebCoreOpenCVT::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-WebCoreOpenCVT-Release-2125e6bb44244eb29649.json",
+					"jsonFile" : "target-WebCoreOpenCVT-Release-5e2c105d75c7dcae855a.json",
 					"name" : "WebCoreOpenCVT",
 					"projectIndex" : 0
 				},
@@ -141,7 +159,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -158,7 +177,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -167,14 +187,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-aac244c26e5a62ddb794.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-8a4e11fc1c22ceda4353.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "WebCoreJNI::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WebCoreJNI-MinSizeRel-cbcd4634a5d97dda9b15.json",
+					"name" : "WebCoreJNI",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "WebCoreOpenCVT::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-WebCoreOpenCVT-MinSizeRel-02d429118b8c10b20c49.json",
+					"jsonFile" : "target-WebCoreOpenCVT-MinSizeRel-efb438f2522f4061d380.json",
 					"name" : "WebCoreOpenCVT",
 					"projectIndex" : 0
 				},
@@ -203,7 +230,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -220,7 +248,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					]
 				}
 			],
@@ -229,14 +258,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-aac244c26e5a62ddb794.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-8a4e11fc1c22ceda4353.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "WebCoreJNI::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WebCoreJNI-RelWithDebInfo-c670823150c3f44e4d37.json",
+					"name" : "WebCoreJNI",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "WebCoreOpenCVT::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-WebCoreOpenCVT-RelWithDebInfo-ff8884b2b1efa7b5ab87.json",
+					"jsonFile" : "target-WebCoreOpenCVT-RelWithDebInfo-7aee3abc7d20ebe79d5d.json",
 					"name" : "WebCoreOpenCVT",
 					"projectIndex" : 0
 				},

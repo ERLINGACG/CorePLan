@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\EdgeDetectionMian.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{0059D8A3-A77B-329D-99BE-EA31FB727B18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

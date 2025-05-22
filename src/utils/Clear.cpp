@@ -26,3 +26,11 @@ int utilsclear::clearMat(cv::Mat* prt){
         return -1;
     }
 }
+int utilsclear::clearEdgeDetector(edgedetection::EdgeDetection* prt){
+    try{
+        delete prt;
+        return 0;
+    }catch(...){
+        return -1;
+    }
+}
