@@ -19,9 +19,12 @@ spring:
   ai:
     openai:
       base-url: https://api.deepseek.com
-#
+
       chat:
         options:
           model: deepseek-reasoner
+mybatis:
+  mapper-locations: classpath*:com/erling/daoJ/**/*.xml
+  type-aliases-package: com.erling.pojo.user
 
 

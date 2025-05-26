@@ -3,7 +3,6 @@ package com.erling.nativeJ.opencvJ.libinterface.basic.image;
 import com.erling.nativeJ.opencvJ.struct.ImageStruct;
 import com.sun.jna.Library;
 import com.sun.jna.Pointer;
-import com.sun.jna.ptr.LongByReference;
 
 public interface EdgeDetection extends Library {
 
@@ -31,6 +30,18 @@ public interface EdgeDetection extends Library {
             String          imageCode,
             double          scale,       // 缩放比例
             double          delta,       // 阈值
+            int             imageQos
+    );
+    ImageStruct FastSobel(
+            Pointer         edgeDetection,
+            byte[]          imageData,
+            int             size,
+            String          imageCode,
+            int             gauss_size ,      // 高斯滤波器大小
+            double          sigmaX     ,          // x方向标准差
+            int             ksize      ,
+            double          scale      ,   // 缩放因子
+            double          delta      ,   // 增量值
             int             imageQos
     );
 

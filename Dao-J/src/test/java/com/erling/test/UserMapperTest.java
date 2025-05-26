@@ -12,10 +12,13 @@ public class UserMapperTest {
 
     private UserMapper userMapper;
 
+
     @Autowired
     public void setUserMapper(UserMapper userMapper) {
         this.userMapper = userMapper;
     }
+
+
 
     @Test
     public void selectByID() {
@@ -23,4 +26,5 @@ public class UserMapperTest {
         System.out.println(user);
         Assertions.assertNotNull(user);
     }
+
 }

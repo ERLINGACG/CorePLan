@@ -135,4 +135,32 @@ public class ImageService {
            System.out.println("FastCannyEdgeDetection耗时：" + (endTime - startTime) + "ms");
        }
     }
+    public static byte[] FastCannyEdgeDetectionByte(
+            byte[] file
+    ){
+        long startTime = System.currentTimeMillis();
+        Pointer edgePointer = null;
+        try {
+            edgePointer = edgeDetectionJNA.CreateEdgeDetection(imageJNA.createCoreImage());
+            byte[] originalBytes = edgeDetectionJNA.FastSobel(
+                    edgePointer,
+                    file,
+                    file.length,
+                    ".webp",
+                    5,
+                    0,
+                    3,
+                    1,
+                    0,
+                    90
+            ).getBytes();
+            return originalBytes;
+        }catch (Exception e){
+            return null;
+        }finally {
+            clearUtils.ClearEdgeDetector(edgePointer);
+            long endTime = System.currentTimeMillis();
+            System.out.println("FastCannyEdgeDetection耗时：" + (endTime - startTime) + "ms");
+        }
+    }
 }

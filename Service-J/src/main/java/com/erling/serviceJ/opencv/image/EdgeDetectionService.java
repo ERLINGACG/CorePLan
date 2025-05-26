@@ -38,4 +38,33 @@ public class EdgeDetectionService {
            clearUtils.ClearEdgeDetector(edgePointer);
         }
     }
+    public static byte[] FastSobel(byte[] image) {
+        Pointer coreImage = imageJNA.createCoreImage();
+        Pointer edgePointer = edgeDetectionJNA.CreateEdgeDetection(coreImage);
+        ImageStruct imageStruct = null;
+        try{
+            long startTime = System.currentTimeMillis();
+            imageStruct =edgeDetectionJNA.FastSobel(
+                    edgePointer,
+                    image,
+                    image.length,
+                    ".jpeg",
+                    3,
+                    0,
+                    3,
+                    1,
+                    0,
+                    90
+            );
+            long endTime = System.currentTimeMillis();
+            System.out.println("Sobel边缘检测耗时: " + (endTime - startTime) + " ms");
+            return imageStruct.getBytes();
+        }catch (Exception e){
+            return null;
+        }finally {
+            clearUtils.ClearImageStruct(imageStruct);
+            clearUtils.ClearCoreImage(coreImage);
+            clearUtils.ClearEdgeDetector(edgePointer);
+        }
+    }
 }

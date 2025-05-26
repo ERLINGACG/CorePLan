@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-//@SpringBootTest(classes = com.erling.Application.class)
+@SpringBootTest(classes = com.erling.Application.class)
 public class UserControllerTest {
 
     @Test

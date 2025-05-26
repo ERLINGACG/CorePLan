@@ -7,25 +7,27 @@ import com.erling.nativeJ.opencvJ.libinterface.utils.ClearUtils;
 import com.erling.nativeJ.opencvJ.struct.ImageStruct;
 import com.erling.nativeJ.opencvJni.implementation.InstanceJNI;
 import com.erling.nativeJ.opencvJni.libinterface.basic.EdgeDetectionJni;
+import com.erling.nativeJ.opencvJni.libinterface.basic.image._EdgeDetectionJni;
 import com.sun.jna.Pointer;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class JNITestLoad {
-    @Test
-    public void test(){
-        EdgeDetectionJni edgeDetectionJni = InstanceJNI.TEST_INSTANCE.getInstance();
-        Assertions.assertNotNull(edgeDetectionJni);
-        int result = edgeDetectionJni.ADD(1, 2);
-        Assertions.assertEquals(3,result);
-        System.out.println("result = " + result);
-    }
+//    @Test
+//    public void test(){
+//        EdgeDetectionJni edgeDetectionJni = InstanceJNI.TEST_INSTANCE.getInstance();
+//        Assertions.assertNotNull(edgeDetectionJni);
+//        int result = edgeDetectionJni.ADD(1, 2);
+//        Assertions.assertEquals(3,result);
+//        System.out.println("result = " + result);
+//    }
     @Test
     public void test1(){
         try (FileInputStream fis = new FileInputStream("E:\\CorePLAN\\Web\\WebCore\\C\\WebCore-G\\lib\\image\\Sample1.jpg")) {
@@ -128,6 +130,38 @@ public class JNITestLoad {
             System.out.println("完毕 平均耗时：" + (total/(runs-3))/1_000_000.0 + " ms");
             Assertions.assertNotNull(result);
             Path outputPath = Paths.get("processed_canny_6.webp");
+            Files.write(outputPath, result);
+            Assertions.assertNotNull(result);
+            System.out.println("保存成功，路径：" + outputPath.toAbsolutePath());
+
+        } catch (Exception e) {
+            System.out.println("Exception occurred:"+e.getMessage());
+            e.printStackTrace();
+        }
+    }
+    @Test
+    public  void NewSobelJNI(){
+        try (FileInputStream fis = new FileInputStream("E:\\CorePLAN\\Web\\WebCore\\C\\WebCore-G\\lib\\image\\Sample1.jpg")) {
+            // 先读取数据再调用 native 方法
+            byte[] data = fis.readAllBytes(); // Java 9+ 语法
+
+            _EdgeDetectionJni edgeDetectionJni = InstanceJNI.EDGE_DETECTION_INSTANCE.getInstance();
+            Assertions.assertNotNull(edgeDetectionJni);
+            long start = System.currentTimeMillis();
+            byte[] result = edgeDetectionJni.SobelJNI(
+                    data,
+                    ".webp",
+                    3,
+                    0,
+                    1,
+                    3,
+                    0,
+                    90
+            );
+            long end = System.currentTimeMillis();
+            System.out.println("耗时: " + (end - start) + " ms");
+            Assertions.assertNotNull(result);
+            Path outputPath = Paths.get("processed_canny_7.webp");
             Files.write(outputPath, result);
             Assertions.assertNotNull(result);
             System.out.println("保存成功，路径：" + outputPath.toAbsolutePath());

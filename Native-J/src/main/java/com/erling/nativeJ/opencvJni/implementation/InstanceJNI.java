@@ -2,12 +2,13 @@ package com.erling.nativeJ.opencvJni.implementation;
 
 import com.erling.nativeJ.opencvJni.config.OpenCVJNIConfig;
 import com.erling.nativeJ.opencvJni.libinterface.basic.EdgeDetectionJni;
+import com.erling.nativeJ.opencvJni.libinterface.basic.image._EdgeDetectionJni;
 import lombok.Getter;
 
 @Getter
 public enum InstanceJNI {
-    TEST_INSTANCE(EdgeDetectionJni.class,OpenCVJNIConfig.OPENCV_VERSION_4_12_0);
-
+    TEST_INSTANCE(EdgeDetectionJni.class,OpenCVJNIConfig.OPENCV_VERSION_4_12_0),
+    EDGE_DETECTION_INSTANCE(_EdgeDetectionJni.class,OpenCVJNIConfig.OPENCV_VERSION_4_12_0);
 
     private final Class<?> nativeClass;
     private final String libPath;
