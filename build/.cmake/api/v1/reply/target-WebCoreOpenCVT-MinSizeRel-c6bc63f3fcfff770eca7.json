@@ -2,13 +2,13 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/WebCoreOpenCVT.dll"
+			"path" : "MinSizeRel/WebCoreOpenCVT.dll"
 		},
 		{
-			"path" : "Release/WebCoreOpenCVT.lib"
+			"path" : "MinSizeRel/WebCoreOpenCVT.lib"
 		},
 		{
-			"path" : "Release/WebCoreOpenCVT.pdb"
+			"path" : "MinSizeRel/WebCoreOpenCVT.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -46,7 +46,7 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 44,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
@@ -75,7 +75,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG"
 				},
 				{
 					"backtrace" : 4,
@@ -111,7 +111,13 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
 			]
 		}
 	],
@@ -165,12 +171,24 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
 			]
 		}
 	],
 	"sources" : 
 	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/mian/dnn/DeepNeuralNetworkYoloMain.cpp",
+			"sourceGroupIndex" : 0
+		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
@@ -186,7 +204,37 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/mian/basic/image/FeatureDetectionMain.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/mian/cuda/FeatureDetectionCUADmain.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/mian/basic/utils/ClearUtils.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/dnn/DeepNeuralNetwork.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/image/basic/FeatureDetection.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/image/cuda/FeatureDetectionCUAD.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

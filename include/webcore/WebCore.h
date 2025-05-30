@@ -8,4 +8,8 @@
 #include "webcore/utils/Clear.h"
 #include <fstream>
 #include "webcore/image/basic/EdgeDetection.h"
+#include "webcore/image/basic/FeatureDetection.h"
+
+
+
 #endif // WEBCORE_H

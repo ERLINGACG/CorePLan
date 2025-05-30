@@ -4,6 +4,9 @@
     <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\EdgeDetectionMianJNI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\_EdgeDetectionMianJNI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\WebCoreImage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -333,9 +333,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\dnn\DeepNeuralNetworkYoloMain.cpp" />
     <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\ImageMian.cpp" />
     <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\EdgeDetectionMian.cpp" />
+    <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\FeatureDetectionMain.cpp" />
+    <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\cuda\FeatureDetectionCUADmain.cpp" />
     <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\utils\ClearUtils.cpp" />
+    <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\dnn\DeepNeuralNetwork.cpp" />
+    <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\FeatureDetection.cpp" />
+    <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\cuda\FeatureDetectionCUAD.cpp" />
     <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\WebCoreImage.cpp" />
     <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\EdgeDetection.cpp" />
     <ClCompile Include="E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\utils\Clear.cpp" />

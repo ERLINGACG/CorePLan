@@ -21,12 +21,17 @@ endif()
 add_library(
     WebCoreOpenCVT SHARED 
     
-    
+    src/mian/dnn/DeepNeuralNetworkYoloMain.cpp
     src/mian/basic/image/ImageMian.cpp
     src/mian/basic/image/EdgeDetectionMian.cpp
+    src/mian/basic/image/FeatureDetectionMain.cpp
+    src/mian/cuda/FeatureDetectionCUADmain.cpp
     src/mian/basic/utils/ClearUtils.cpp
-
-
+    
+    
+    src/dnn/DeepNeuralNetwork.cpp
+    src/image/basic/FeatureDetection.cpp
+    src/image/cuda/FeatureDetectionCUAD.cpp
     src/image/basic/WebCoreImage.cpp
     src/image/basic/EdgeDetection.cpp
     src/utils/Clear.cpp
@@ -35,6 +40,7 @@ add_library(
 add_library(
     WebCoreJNI SHARED
     src/mian/basic/image/EdgeDetectionMianJNI.cpp
+    src/mian/basic/image/_EdgeDetectionMianJNI.cpp
 
     src/image/basic/WebCoreImage.cpp
     src/image/basic/EdgeDetection.cpp

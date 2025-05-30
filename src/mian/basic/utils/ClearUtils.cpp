@@ -2,6 +2,7 @@
 #include "webcore/utils/Clear.h"
 using namespace webcoreimage;
 using namespace edgedetection;
+using namespace featuredetection;
 extern "C"{
     CORE_API int ClearMat(cv::Mat* mat){
         return utilsclear::clearMat(mat);
@@ -14,5 +15,8 @@ extern "C"{
     }
     CORE_API int ClearEdgeDetector(EdgeDetection* edgeDetector){
         return utilsclear::clearEdgeDetector(edgeDetector);
+    }
+    CORE_API int ClearFeatureDetector(FeatureDetector* featureDetector){
+        return utilsclear::clearFeatureDetector(featureDetector);
     }
 }

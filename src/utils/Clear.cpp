@@ -34,3 +34,11 @@ int utilsclear::clearEdgeDetector(edgedetection::EdgeDetection* prt){
         return -1;
     }
 }
+int utilsclear::clearFeatureDetector(featuredetection::FeatureDetector* prt){
+    try{
+        delete prt;
+        return 0;
+    }catch(...){
+        return -1;
+    }
+}

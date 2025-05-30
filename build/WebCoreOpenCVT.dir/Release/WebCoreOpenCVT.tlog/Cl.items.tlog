@@ -1,6 +1,12 @@
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\dnn\DeepNeuralNetworkYoloMain.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\DeepNeuralNetworkYoloMain.obj
 E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\ImageMian.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\ImageMian.obj
 E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\EdgeDetectionMian.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\EdgeDetectionMian.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\image\FeatureDetectionMain.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\FeatureDetectionMain.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\cuda\FeatureDetectionCUADmain.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\FeatureDetectionCUADmain.obj
 E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\mian\basic\utils\ClearUtils.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\ClearUtils.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\dnn\DeepNeuralNetwork.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\DeepNeuralNetwork.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\FeatureDetection.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\FeatureDetection.obj
+E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\cuda\FeatureDetectionCUAD.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\FeatureDetectionCUAD.obj
 E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\WebCoreImage.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\WebCoreImage.obj
 E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\image\basic\EdgeDetection.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\EdgeDetection.obj
 E:\CorePLAN\Web\WebCore\WebCoreOpenCV\src\utils\Clear.cpp;E:\CorePLAN\Web\WebCore\WebCoreOpenCV\build\WebCoreOpenCVT.dir\Release\Clear.obj

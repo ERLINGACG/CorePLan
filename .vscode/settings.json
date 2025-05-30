@@ -58,7 +58,8 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "climits": "cpp",
-        "xmemory": "cpp"
+        "xmemory": "cpp",
+        "cfloat": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled",
 

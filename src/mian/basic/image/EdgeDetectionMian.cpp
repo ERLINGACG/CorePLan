@@ -108,6 +108,7 @@ extern "C"{
         int             imageqos
     ){
         try{
+            
             return edgeDetection->InlineLaplacian(
                 image,
                 size,
@@ -120,6 +121,35 @@ extern "C"{
             return nullptr;
 
         }
+    }
+    CORE_API ImageStruct* FastSobel(
+            EdgeDetection* edgeDetection,
+            unsigned char*  image,
+            int             size,
+            const char*     imagecode,
+            int             gauss_size ,      // 高斯滤波器大小
+            double          sigmaX     ,          // x方向标准差
+            int             ksize      , 
+            double          scale      ,   // 缩放因子
+            double          delta      ,   // 增量值 
+            int             imageqos   
+    ){
+        try{
+         return edgeDetection->InlineSobel(
+                    image,
+                    size,
+                    imagecode ,
+                    gauss_size,      // 高斯滤波器大小
+                    sigmaX    ,          // x方向标准差
+                    ksize     ,
+                    scale     ,   // 缩放因子
+                    delta     ,   // 增量值
+                    imageqos).release();
+        }catch(...){
+            std::cout<<"error"<<std::endl;
+            return nullptr;
+
+       }
     }
 
     CORE_API void Debug(){

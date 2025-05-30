@@ -143,6 +143,49 @@ std::unique_ptr<ImageStruct> EdgeDetection::Laplacian(
     return result;
         
 }
+std::unique_ptr<ImageStruct> EdgeDetection::InlineSobel(
+            unsigned char*  image,
+            int             size,
+            const char*     imagecode,
+            int             gauss_size ,      // 高斯滤波器大小
+            double          sigmaX     ,          // x方向标准差
+            int             ksize      , 
+            double          scale      ,   // 缩放因子
+            double          delta      ,   // 增量值 
+            int             imageqos   
+){
+     if(gauss_size > 0) {
+        gauss_size |= 0x1;  // 奇数化：当gauss_size为偶数时，将其+1
+     } else {
+        gauss_size = 1;     // 处理非正数的情况
+     }
+     std::vector<unsigned char> buf(image, image + size);
+     cv::Mat input = cv::imdecode(buf, cv::IMREAD_GRAYSCALE); // 直接解码为灰度图
+    //  cv::resize(input, input, cv::Size(800,600),0,0, cv::INTER_AREA); // 缩放
+     cv::Mat grad_x, grad_y; //x方向梯度，y方向梯度
+     cv::GaussianBlur(input, input,cv::Size(gauss_size,gauss_size), sigmaX);    //高斯滤波,原地操作
+     cv::Sobel(input, grad_x, CV_16S, 1, 0, ksize, scale, delta, cv::BORDER_DEFAULT); //x方向梯度
+     cv::Sobel(input, grad_y, CV_16S, 0, 1, ksize, scale, delta, cv::BORDER_DEFAULT); //y方向梯度
+
+     //转换回CV_8U类型
+    cv::convertScaleAbs(grad_x, grad_x);
+    cv::convertScaleAbs(grad_y, grad_y);
+
+    cv::Mat combined;
+    cv::addWeighted(grad_x, 0.5, grad_y, 0.5, 0, combined);
+    std::vector<int> params {cv::IMWRITE_WEBP_QUALITY, imageqos}; 
+    std::vector<uchar> encoded;
+    cv::imencode(imagecode, combined, encoded, params);
+
+    // 直接构造结果
+    auto result = std::make_unique<ImageStruct>();
+    result->data.reset(new uchar[encoded.size()]);
+    memcpy(result->data.get(), encoded.data(), encoded.size());
+    result->size = encoded.size();
+    
+    return result;
+}
+
 std::unique_ptr<ImageStruct> EdgeDetection::Sobel(
     cv::Mat* image,
     int      gauss_size,      // 高斯滤波器大小
